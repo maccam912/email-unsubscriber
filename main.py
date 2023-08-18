@@ -193,7 +193,9 @@ def unsubscribe_from_email(url: str) -> None:
         " links, or deselect checkboxes in order to unsubscribe from all marketing"
         " emails. With the browser tools provided, read and understand the content on"
         " the page and then interact with it to unsubscribe from all marketing emails."
-        f" The URL to unsubscribe: {url}"
+        " Be sure to use the ExtractTextTool and ExtractHyperlinksTool often to"
+        " understand what you can click on and what the text of the page contains. The"
+        f" URL to unsubscribe: {url}"
     )
     print(result)
 
