@@ -1,3 +1,7 @@
+import os
+#os.environ["OPENAI_API_BASE"] = "https://api.endpoints.anyscale.com/v1"
+#os.environ["OPENAI_API_KEY"] = "esecret_ribs5z98l1j49hu9bsmqbkrfsu"
+
 import email
 import imaplib
 import logging
@@ -21,6 +25,7 @@ analyzes them to determine if they are unwanted (e.g., marketing, newsletters),
 and provides an option to unsubscribe from them using Langchain and Playwright.
 """
 
+# model_name = "meta-llama/Llama-2-70b-chat-hf"
 model_name = "gpt-3.5-turbo"
 
 logger = logging.getLogger(__name__)
@@ -137,6 +142,7 @@ def connect_to_email(
         raw_email = data[0][1]
         msg = email.message_from_bytes(raw_email)
         subj = msg.get("Subject")
+        print(subj)
         decoded_subj = decode_field(subj)  # Decode the subject line
         from_address = msg.get("From")
         decoded_from = decode_field(from_address)  # Decode the from address
