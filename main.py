@@ -1,6 +1,4 @@
 import os
-#os.environ["OPENAI_API_BASE"] = "https://api.endpoints.anyscale.com/v1"
-#os.environ["OPENAI_API_KEY"] = "esecret_ribs5z98l1j49hu9bsmqbkrfsu"
 
 import email
 import imaplib
